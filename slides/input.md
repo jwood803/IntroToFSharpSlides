@@ -6,13 +6,24 @@
 
 ***
 
+### What is F#?
+
+Functional first .NET language.
+
+
+***
+
 ### Why F#?
 
-- Hybrid language that is functional first
-  - Immutable by default
 - Type providers
 - Option Type
-
+- Rapid prototyping with the F# Interactive
+- Fewer bugs
+  - Immutable
+  - Units of Measure
+- Interoperability
+  - Other languages than just .NET languages
+  
 ***
 
 ### Type Providers
