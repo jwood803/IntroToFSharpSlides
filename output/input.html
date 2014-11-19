@@ -41,15 +41,29 @@
         <div class="slides">
             <section>
 
+<h3>What is F#?</h3>
+
+<p>Functional first .NET language.</p>
+
+</section>
+
+<section>
+
 <h3>Why F#?</h3>
 
 <ul>
-<li>Hybrid language that is functional first
-<ul>
-<li>Immutable by default</li>
-</ul></li>
 <li>Type providers</li>
 <li>Option Type</li>
+<li>Rapid prototyping with the F# Interactive</li>
+<li>Fewer bugs
+<ul>
+<li>Immutable</li>
+<li>Units of Measure</li>
+</ul></li>
+<li>Interoperability
+<ul>
+<li>Other languages than just .NET languages</li>
+</ul></li>
 </ul>
 
 </section>
@@ -60,7 +74,7 @@
 
 <p>There are already a <strong>ton</strong> of readily available type providers to access anything that you may need.</p>
 
-<p>| SQL  |  Entity Framework| Freebase   | Worldbank   |
+<p>| SQL  |  Entity Framework | Freebase   | Worldbank   |
 |--------------------------|------------------|------|
 | CSV  | Excel | XAML | Hive |
 | JSON | R | Python? | XML |</p>
@@ -81,20 +95,34 @@
 
 <section>
 
-<p>type PhoneNumber = { Home: string option
-                       Cell: string option
-                       Work: string option
-                     }</p>
+<p><code></code>`
+type PhoneNumber = { Home: string option
+                     Cell: string option
+                     Work: string option
+                   }</p>
 
 <p>let myPhone = { Home = None
-                  Cell = Some "555-555-5555"
-                  Work = Some "555-555-5551"
-                }</p>
+                Cell = Some "555-555-5555"
+                Work = Some "555-555-5551"
+              }</p>
 
 <p>let getHomePhone phoneNumber =
-      match phoneNumber.Home with
-      | Some number -> printfn "Number is %s" number
-      | None -> printfn "No number provided"</p>
+    match phoneNumber.Home with
+    | Some number -> printfn "Number is %s" number
+    | None -> printfn "No number provided"
+<code></code>`
+<em></em>*</p>
+
+<h3>How can Wintellect benefit?</h3>
+
+<ul>
+<li>Consulting
+<ul>
+<li>Data</li>
+</ul></li>
+<li>Training</li>
+<li>WintellectNow series</li>
+</ul>
 
 </section>
 

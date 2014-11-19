@@ -23,13 +23,13 @@ Functional first .NET language.
   - Units of Measure
 - Interoperability
   - Other languages than just .NET languages
-  
+
 ***
 
 ### Type Providers
 There are already a **ton** of readily available type providers to access anything that you may need.
 
-| SQL  |  Entity Framework| Freebase   | Worldbank   |
+| SQL  |  Entity Framework | Freebase   | Worldbank   |
 |--------------------------|------------------|------|
 | CSV  | Excel | XAML | Hive |
 | JSON | R | Python? | XML |
@@ -42,17 +42,28 @@ There are already a **ton** of readily available type providers to access anythi
 
 ---
 
-  type PhoneNumber = { Home: string option
-                       Cell: string option
-                       Work: string option
-                     }
+```
+type PhoneNumber = { Home: string option
+                     Cell: string option
+                     Work: string option
+                   }
 
-  let myPhone = { Home = None
-                  Cell = Some "555-555-5555"
-                  Work = Some "555-555-5551"
-                }
+let myPhone = { Home = None
+                Cell = Some "555-555-5555"
+                Work = Some "555-555-5551"
+              }
 
-  let getHomePhone phoneNumber =
-      match phoneNumber.Home with
-      | Some number -> printfn "Number is %s" number
-      | None -> printfn "No number provided"
+let getHomePhone phoneNumber =
+    match phoneNumber.Home with
+    | Some number -> printfn "Number is %s" number
+    | None -> printfn "No number provided"
+```
+
+***
+
+### How can Wintellect benefit?
+
+- Consulting
+  - Data
+- Training
+- WintellectNow series
