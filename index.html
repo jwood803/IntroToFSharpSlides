@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Awesomeness of F#</title>
+	<title>F# |> I &lt;3</title>
 
 	<meta name="description" content="Introduction to F#.">
 	<meta name="author" content="Jonathan Wood">
@@ -26,7 +26,6 @@
 </head>
 
 	<body>
-
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -58,9 +57,20 @@
 				</section>
 
 				<section id="option-type">
-					<h3>Option Types</h3>
+					<section class="fragment">
+						<h3>Option Types</h3>
 
-					<blockquote class="twitter-tweet" style="text-align: center; width:auto; display:table " data-conversation="none" lang="en"><p>&gt; <a href="https://twitter.com/davetchepak">@davetchepak</a> &quot;What can C# do that F# cannot?&quot; NullReferenceException :-)</p>&mdash; Tomas Petricek (@tomaspetricek) <a href="https://twitter.com/tomaspetricek/status/314872258839601152">March 21, 2013</a></blockquote>					
+						<img src="img/nullRefTweet.png" alt="Null Reference Tweet"/>
+					</section>
+					<section class="fragment">
+						<pre><code data-trim contenteditable>
+type Person = { Name: string }
+ 
+type Employee = { Person: Person; IsActive: bool }
+ 
+let employee = { Person = { Name = "John" }; IsActive = true }
+						</code></pre>
+					</section>
 				</section>
 
 				<section id="object-expressions">
@@ -81,7 +91,6 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-		<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		<script>
 			Reveal.initialize({
