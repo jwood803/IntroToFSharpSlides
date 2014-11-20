@@ -23,7 +23,7 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
 	<body>
 
@@ -58,6 +58,9 @@
 				</section>
 
 				<section id="option-type">
+					<h3>Option Types</h3>
+
+					<blockquote class="twitter-tweet" style="text-align: center; width:auto; display:table " data-conversation="none" lang="en"><p>&gt; <a href="https://twitter.com/davetchepak">@davetchepak</a> &quot;What can C# do that F# cannot?&quot; NullReferenceException :-)</p>&mdash; Tomas Petricek (@tomaspetricek) <a href="https://twitter.com/tomaspetricek/status/314872258839601152">March 21, 2013</a></blockquote>					
 				</section>
 
 				<section id="object-expressions">
@@ -76,28 +79,29 @@
 			</div>
 		</div>
 
-			<script src="lib/js/head.min.js"></script>
-			<script src="js/reveal.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-			<script>
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					center: true,
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 
-					theme: Reveal.getQueryHash().theme,
-					transition: Reveal.getQueryHash().transition || 'default',
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				]
-			});
-			</script>
-		</body>
-		</html>
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			]
+		});
+		</script>
+	</body>
+</html>
