@@ -81,29 +81,43 @@ let rec cast<'a> (myList: obj list) =
 					</section>
 					<section class="fragment">
 						<pre><code data-trim contenteditable>
-type Person = { Name: string }
+type PhoneNumber = {
+	Home: string option
+	Cell: string option
+	Work: string option
+}
 
-type Employee = { Person: Person; IsActive: bool }
+let myPhone = {
+	Home = None
+	Cell = Some "555-555-5555"
+	Work = Some "555-555-5551"
+}
 
-let employee = { Person = { Name = "John" }; IsActive = true }
+let getHomePhone phoneNumber =
+	match phoneNumber.Home with
+	| Some number -> printfn "Number is %s" number
+	| None -> printfn "No number provided"
 						</code></pre>
 					</section>
 				</section>
 
 				<section id="object-expressions">
+					<h3>Object Expressions</h3>
 				</section>
 
 				<section id="immutability">
+					<h3>Immutability</h3>
 				</section>
 
 				<section id="units-of-measure">
+					<h3>Units of Measure</h3>
 				</section>
 
 				<section id="what-can-we-do">
 					<h3>How can we take advantage?</h3>
-					<ul class="fragment">
+					<ul>
 						<li class="fragment">Data consulting projects - data science?</li>
-						<li class="fragment">Training courses<li>
+						<li class="fragment">Training courses</li>
 						<li class="fragment">WintellectNOW series</li>
 					</ul>
 				</section>
