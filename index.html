@@ -67,8 +67,8 @@ let rec cast<'a> (myList: obj list) =
 					</ul>
 				</section>
 
-				<section id="type-providers">
-					<section class="fragment">
+				<section>
+					<section id="type-providers" class="fragment">
 						<h3>Type Providers</h3>
 
 						<table>
@@ -99,6 +99,21 @@ let rec cast<'a> (myList: obj list) =
 							</tr>
 						</tbody></table>
 
+					</section >
+
+					<section id="type-providers-sample" class="fragment">
+						<pre><code contenteditable>
+open FSharp.Data
+
+let deliveryData = CsvProvider<"delivery_data.csv">.GetSample()
+
+let validZipCodes =
+	deliveryData.Rows
+		|> Seq.map(fun r -> r.Pickup_zipcode)
+		|> Seq.countBy id
+		|> Seq.filter(fun (z, c) -> c > 20 && z.HasValue)
+		|> Seq.map(fun (z, c) -> z.Value)
+						</code></pre>
 					</section>
 				</section>
 
