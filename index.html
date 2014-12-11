@@ -107,12 +107,7 @@ open FSharp.Data
 
 let deliveryData = CsvProvider<"delivery_data.csv">.GetSample()
 
-let validZipCodes =
-	deliveryData.Rows
-		|> Seq.map(fun r -> r.Pickup_zipcode)
-		|> Seq.countBy id
-		|> Seq.filter(fun (z, c) -> c > 20 && z.HasValue)
-		|> Seq.map(fun (z, c) -> z.Value)
+deliveryData.Rows
 						</code></pre>
 					</section>
 				</section>
