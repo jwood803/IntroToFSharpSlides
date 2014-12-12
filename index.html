@@ -30,9 +30,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section id="getting-started">
+					<section id="start" class="fragment">
+						<h3>F#</h3>
+					</section>
 					<section class="fragment">
-						<h3>My first look at F#</h3>
-
 						<pre><code data-trim contenteditable>
 let rec cast<'a> (myList: obj list) =
 	match myList with
@@ -60,8 +61,7 @@ let rec cast<'a> (myList: obj list) =
 							<li class="fragment">Units of Measure</li></ul></li>
 						<li class="fragment">Interoperability <br>
 							<ul>
-								<li class="fragment">Other languages than just .NET languages</li>
-								<ul class="fragment">R, Python, MATLAB</ul>
+								<li class="fragment">R, Python, MATLAB</li>
 							</ul>
 						</li>
 					</ul>
@@ -120,28 +120,12 @@ deliveryData.Rows
 					</section>
 					<section id="option-type2" class="fragment">
 						<pre><code data-trim contenteditable>
-type PhoneNumber = {
-	Home: string option
-	Cell: string option
-	Work: string option
-}
-
-let myPhone = {
-	Home = None
-	Cell = Some "555-555-5555"
-	Work = Some "555-555-5551"
-}
-
-let getHomePhone phoneNumber =
-	match phoneNumber.Home with
-	| Some number -> printfn "Number is %s" number
-	| None -> printfn "No number provided"
+let hasBalance (balance: float option) = 
+  match balance with
+    | Some b -> printfn "Balance - %f" b
+    | None -> printfn "No balance available"
 						</code></pre>
 					</section>
-				</section>
-
-				<section id="object-expressions">
-					<h3>Object Expressions</h3>
 				</section>
 
 				<section id="immutability">
@@ -150,6 +134,13 @@ let getHomePhone phoneNumber =
 
 				<section id="units-of-measure">
 					<h3>Units of Measure</h3>
+
+					<pre><code data-trim contenteditable>
+[&lt;Measure&gt;] type dollar
+
+let dollarsToEuros dollars: float&lt;dollar&gt; =
+    dollars * 0.74&lt;dollar&gt;
+					</code></pre>
 				</section>
 
 				<section id="what-can-we-do">
