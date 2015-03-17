@@ -27,21 +27,32 @@
 
 	<body>
 		<div class="reveal">
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section id="getting-started">
-					<section id="start" class="fragment">
-						<h3>F#</h3>
+				<section id="start">
+					<h1>Intro to F#</h1>
+					<p>
+						<small>Created by Jonathan Wood</br>
+							jwood@wintellect.com / <a href="http://dotnetmeditations.com">dotnetmeditations.com</a> / <a href="http://twitter.com/jwood">@JWood</a></small>
+						</p>
+
+						<aside class="notes">
+				    	Go over the main points of the talk - introducting F# as a language, why I think it's great, and how it can be incorporated.
+
+							Also start on the small story of how I got into F#.
+				    </aside>
 					</section>
-					<section class="fragment">
-						<pre><code data-trim contenteditable>
+
+				<section id="getting-started">
+
+					<section id="snippet" class="fragment">
+						<pre><code>
 let rec cast&lt;'a&gt; (myList: obj list) =
-	match myList with
-	| head::tail ->
-		match head with
-		| :? 'a as a -> a::(cast tail)
-		| _ -> cast tail
-	| [] -> []
+ match myList with
+ | head::tail ->
+  match head with
+  | :? 'a as a -> a::(cast tail)
+  | _ -> cast tail
+ | [] -> []
 						</code></pre>
 					</section>
 
@@ -53,18 +64,29 @@ let rec cast&lt;'a&gt; (myList: obj list) =
 				<section id="why-f">
 					<h3>Why F#?</h3>
 					<ul>
+						<li class="fragment">Fewer bugs <br>
+							<ul>
+								<li class="fragment">Immutable by default</li>
+								<li class="fragment">Units of Measure</li>
+							</ul>
+						</li>
 						<li class="fragment">Type providers</li>
 						<li class="fragment">Option types</li>
 						<li class="fragment">Rapid prototyping with the F# Interactive</li>
-						<li class="fragment">Fewer bugs <br>
-						<ul><li class="fragment">Immutable by default</li>
-							<li class="fragment">Units of Measure</li></ul></li>
-						<li class="fragment">Interoperability <br>
-							<ul>
-								<li class="fragment">R, Python, MATLAB</li>
-							</ul>
-						</li>
+						<li class="fragment">Interoperability</li>
 					</ul>
+
+					<aside class="notes">
+						Briefly mention each of these points. Most will be in detail later.
+					</aside>
+				</section>
+
+				<section id="demoFSharp">
+					Demo
+
+					<aside class="notes">
+						Go over the two console apps to briefly show syntax differences.
+					</aside>
 				</section>
 
 				<section>
@@ -73,7 +95,7 @@ let rec cast&lt;'a&gt; (myList: obj list) =
 
 						<img src="img/Type Providers.jpg" alt="Type providers">
 
-					</section >
+					</section>
 
 					<section id="type-providers-sample" class="fragment">
 						<pre><code contenteditable>
@@ -83,6 +105,10 @@ let deliveryData = CsvProvider&lt;"delivery_data.csv"&gt;.GetSample()
 						</code></pre>
 
 						<img src="img/typeProvider.jpg" alt="Type provider usage">
+
+						<aside class="notes">
+							Demo the SQL provider real quick to show how easy it is.
+						</aside>
 					</section>
 				</section>
 
@@ -94,7 +120,7 @@ let deliveryData = CsvProvider&lt;"delivery_data.csv"&gt;.GetSample()
 					</section>
 					<section id="option-type2" class="fragment">
 						<pre><code data-trim contenteditable>
-let hasBalance (balance: float option) = 
+let hasBalance (balance: float option) =
   match balance with
     | Some b -> printfn "Balance - %f" b
     | None -> printfn "No balance available"
@@ -148,6 +174,7 @@ let dollarsToEuros dollars: float&lt;dollar&gt; =
 			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 			]
 		});
 		</script>
