@@ -9,8 +9,6 @@ namespace ConsoleCSharp
             var world = "World!";
 
             Console.WriteLine("Hello " + world);
-
-            Console.ReadLine();
         }
     }
 }

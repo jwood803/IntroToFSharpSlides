@@ -6,6 +6,4 @@ let main argv =
     
     printfn "Hello %s" world
 
-    let input = Console.ReadLine()
-
     0 // return an integer exit code
