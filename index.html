@@ -30,6 +30,10 @@
 			<div class="slides">
 				<section id="start">
 					<h1>Intro to F#</h1>
+
+					<aside class="notes">
+						Go over the main points of the talk - introducting F# as a language, why I think it's great, and how it can be incorporated.
+					</aside>
 				</section>
 
 				<section id="who-am-i">
@@ -37,12 +41,10 @@
 
 					Jonathan Wood</br>
 					jwood@wintellect.com / <a href="http://dotnetmeditations.com">dotnetmeditations.com</a> / <a href="http://twitter.com/jwood">@JWood</a>
-					
-					<aside class="notes">
-				    	Go over the main points of the talk - introducting F# as a language, why I think it's great, and how it can be incorporated.
 
-						Also start on the small story of how I got into F#.
-				    </aside>
+					<aside class="notes">
+						Briefly go over who I am and Wintellect. Also start on the small story of how I got into F#.
+				  </aside>
 				</section>
 
 				<section id="getting-started">
@@ -93,6 +95,26 @@ let rec cast&lt;'a&gt; (myList: obj list) =
 					</aside>
 				</section>
 
+				<section id="immutability">
+					<h3>Immutability</h3>
+				</section>
+
+				<section>
+					<section id="option-type" class="fragment">
+						<h3>Option Types</h3>
+
+						<img src="img/nullRefTweet.png" alt="Null Reference Tweet"/>
+					</section>
+					<section id="option-type2" class="fragment">
+						<pre><code data-trim contenteditable>
+let hasBalance (balance: float option) =
+	match balance with
+		| Some b -> printfn "Balance - %f" b
+		| None -> printfn "No balance available"
+						</code></pre>
+					</section>
+				</section>
+				
 				<section>
 					<section id="type-providers" class="fragment">
 						<h3>Type Providers</h3>
@@ -116,26 +138,6 @@ let deliveryData = CsvProvider&lt;"delivery_data.csv"&gt;.GetSample()
 					</section>
 				</section>
 
-				<section>
-					<section id="option-type" class="fragment">
-						<h3>Option Types</h3>
-
-						<img src="img/nullRefTweet.png" alt="Null Reference Tweet"/>
-					</section>
-					<section id="option-type2" class="fragment">
-						<pre><code data-trim contenteditable>
-let hasBalance (balance: float option) =
-  match balance with
-    | Some b -> printfn "Balance - %f" b
-    | None -> printfn "No balance available"
-						</code></pre>
-					</section>
-				</section>
-
-				<section id="immutability">
-					<h3>Immutability</h3>
-				</section>
-
 				<section id="units-of-measure">
 					<h3>Units of Measure</h3>
 
@@ -145,15 +147,6 @@ let hasBalance (balance: float option) =
 let dollarsToEuros dollars: float&lt;dollar&gt; =
     dollars * 0.74&lt;dollar&gt;
 					</code></pre>
-				</section>
-
-				<section id="what-can-we-do">
-					<h3>How can we take advantage?</h3>
-					<ul>
-						<li class="fragment">Data consulting projects - data science?</li>
-						<li class="fragment">Training courses</li>
-						<li class="fragment">WintellectNOW series</li>
-					</ul>
 				</section>
 			</div>
 		</div>
