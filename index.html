@@ -120,13 +120,23 @@ let rec cast&lt;'a&gt; (myList: obj list) =
 						<img src="img/nullRefTweet.png" alt="Null Reference Tweet"/>
 					</section>
 					<section id="option-type2" class="fragment">
-						<pre><code data-trim contenteditable>
+						<pre><code>
 let hasBalance (balance: float option) =
 	match balance with
-		| Some b -> printfn "Balance - %f" b
-		| None -> printfn "No balance available"
+	| Some b -> printfn "Balance - %f" b
+	| None -> printfn "No balance available"
 						</code></pre>
 					</section>
+				</section>
+
+				<section id="pattern-matching">
+					<pre><code>
+let x = "4"
+
+match Int32.TryParse(x) with
+    | (true, value) -> printfn "Parsed - %i" value
+    | (false, _) -> printfn "No parsing for you!"
+					</code></pre>
 				</section>
 
 				<section>
