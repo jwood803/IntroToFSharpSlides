@@ -177,14 +177,22 @@ let deliveryData = CsvProvider&lt;"delivery_data.csv"&gt;.GetSample()
 				</section>
 
 				<section id="units-of-measure">
-					<h3>Units of Measure</h3>
+					<section id="units-of-measure1" class="fragment">
+						<h3>Units of Measure</h3>
 
-					<pre><code data-trim contenteditable>
+						<ul>
+							<li class="fragment">Add meta-data to numeric types</li>
+							<li class="fragment">Adds extra type safety</li>
+						</ul>
+					</section>
+					<section id="units-of-measure2" class="fragment">
+						<pre><code data-trim contenteditable>
 [&lt;Measure&gt;] type dollar
 
 let dollarsToEuros dollars: float&lt;dollar&gt; =
-    dollars * 0.74&lt;dollar&gt;
-					</code></pre>
+	dollars * 0.74&lt;dollar&gt;
+						</code></pre>
+					</section>
 				</section>
 
 				<section id="how-to-use">
