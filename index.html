@@ -29,7 +29,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="start">
-					<h1>Intro to F#</h1>
+					<h2>A Gentle Intro to F#</h2>
 
 					<aside class="notes">
 						Go over the main points of the talk - introducting F# as a language, why I think it's great, and how it can be incorporated.
@@ -72,7 +72,7 @@ let rec cast&lt;'a&gt; (myList: obj list) =
 						Briefly go over who I am and Wintellect.
 				  </aside>
 				</section>
-				
+
 				<section id="why-f">
 					<h3>Why F#?</h3>
 					<ul>
@@ -130,15 +130,21 @@ let hasBalance (balance: float option) =
 					</section>
 				</section>
 
-				<section id="pattern-matching">
-					<pre><code>
+				<section id="pattern-matching" class="fragment">
+					<section id="pattern-matching2" class="fragment">
+						<h3>Pattern Matching</h3>
+					</section>
+					
+					<section id="pattern-matching3" class="fragment">
+						<pre><code>
 let x = "4"
 
 match Int32.TryParse(x) with
     | (true, value) -> printfn "Parsed - %i" value
     | (false, _) -> printfn "No parsing for you!"
-					</code></pre>
+						</code></pre>
 
+					</section>
 					<aside class="notes">
 						Go over a few things in this code:
 						- Mention tuples
